@@ -1,12 +1,11 @@
 package com.harshit.bolkarapp.pojo.entities
 
 data class Data(
-    val __v: Int =0,
+    val __v: List<Members> ,
     val _id: String ="",
     val appId: String ="",
     val blocks: String ="",
     val host: List<Host>,
-    val members: List<Members>,
     val modHistory: String ="",
     val moderators: List<Moderators>,
     val raiseAllow: Boolean = true,
@@ -19,5 +18,7 @@ data class Data(
     val total_members: Int =0,
     val type: Int =0,
     val version: Int =0,
-    val volume: Int =0
+    val volume: Int =0,
+    val members: List<Members>
+
 )

@@ -1,10 +1,11 @@
 package com.harshit.bolkarapp.utils
 
-import android.widget.ImageView
+import android.annotation.SuppressLint
+import android.view.MotionEvent
+import android.view.View
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.harshit.bolkarapp.adapter.RecyclerAdapter
 import com.harshit.bolkarapp.pojo.entities.Members
 import com.harshit.bolkarapp.ui.HomeViewModel
@@ -27,20 +28,9 @@ private fun getMemberAdapter(recyclerView: RecyclerView): RecyclerAdapter {
     }
 }
 
-
-
-
-
-@BindingAdapter("setImage")
-fun bindImage(imageView: ImageView, url: String?) {
-    url?.let {
-        Glide.with(imageView.context).load(url).into(imageView)
-    }
-}
-
-@BindingAdapter("setDate")
-fun bindDate(textView: TextView, date: String?) {
-    date?.let {
-        textView.text = DateHelper.formatDate(it)
+@BindingAdapter("txtName")
+fun bindName(textView: TextView, name: String?){
+    name?.let {
+        textView.text = it
     }
 }

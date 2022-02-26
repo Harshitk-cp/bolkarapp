@@ -2,6 +2,7 @@ package com.harshit.bolkarapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.harshit.bolkarapp.R
@@ -20,5 +21,13 @@ class MainActivity : AppCompatActivity() {
             viewModel = homeViewModel
             lifecycleOwner = this@MainActivity
         }
+        binding.btnBack.setOnClickListener {
+            super.onBackPressed()
+        }
     }
+
+
+
+
+
 }

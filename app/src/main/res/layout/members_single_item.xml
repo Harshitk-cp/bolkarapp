@@ -28,7 +28,7 @@
             android:src="@drawable/ic_baseline_person_24" />
 
         <TextView
-            android:id="@+id/txtNameembers"
+            android:id="@+id/txtNameMembers"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imgPersonMembers"
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             android:drawableLeft="@drawable/ic_host_badge"
-            android:text="@{item.n}"
+            app:txtName="@{item.n}"
             android:textColor="@color/black"
             android:textSize="14sp" />
 

@@ -7,7 +7,7 @@
 
         <variable
             name="item"
-            type="com.harshit.bolkarapp.pojo.entities.PeopleWrapper" />
+            type="com.harshit.bolkarapp.pojo.entities.Data" />
 
         <variable
             name="viewModel"
@@ -90,7 +90,6 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -109,8 +108,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:scrollbars="vertical"
-            app:assignParentList="@{viewModel.list}"
-            app:assignParentViewModel="@{viewModel}"
+            app:assignList="@{viewModel.members}"
+            app:assignViewModel="@{viewModel}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintTop_toBottomOf="@id/rvPrimary" />
 
@@ -122,6 +121,7 @@
             app:layout_constraintBottom_toBottomOf="parent" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
